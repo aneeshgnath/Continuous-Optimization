@@ -10,7 +10,7 @@ Note: You can read the principles in `README.pdf`
     
     1.2 Numerically Computing Hessian Matrix
     
-    1.3 Goldeen Section Method
+    1.3 Golden Section Method
     
     
 2. OPTIMIZATION ALGORITHMS
