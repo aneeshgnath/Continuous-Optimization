@@ -6,27 +6,27 @@ Note: You can read the principles in `README.pdf`
 
 1. BASIC ALGORITHMS
 
-    1.1 NUMERICALLY COMPUTING GRADIENT VECTOR
+    1.1 Numerically Computing Gradient Vector
     
-    1.2 NUMERICALLY COMPUTING HESSIAN MATRIX
+    1.2 Numerically Computing Hessian Matrix
     
-    1.3 GOLDEN SECTION METHOD
+    1.3 Goldeen Section Method
     
     
 2. OPTIMIZATION ALGORITHMS
 
-    2.1 UNCONSTRAINED OPTIMIZATION ALGORITHMS
+    2.1 Unconstrained Optimization Algorithms
 
-    1. GRADIENT DESCENT METHOD
+    1. Gradient Descent Method
     
-    2. GUARDED NEWTON METHOD
+    2. Guarded Newton Method
     
-    3. CONJUGATE GRADIENT METHOD (USING FLETCHER-REEVES METHOD)
+    3. Conjugate Gradient Method (Using Fletcher-Reeves Method)
     
-    4. QUASI NEWTON METHOD (COMING SOON)
+    4. Quasi Newton Method (COMING SOON)
     
-    2.2 CONSTRAINED OPTIMIZATION ALGORITHMS
+    2.2 Constrained Optimization Algorithms
     
-    1. ZOUTENDIJK METHOD (COMING SOON)
+    1. Zoutendijk Method (COMING SOON)
     
-    2. INTERIOR POINT METHOD (COMING SOON)
+    2. Interior Point Method (COMING SOON)
