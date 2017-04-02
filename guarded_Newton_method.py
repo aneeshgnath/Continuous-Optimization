@@ -13,7 +13,7 @@ def guardedNewtionMethod(func, initialX, displayDetail= False, decimal= 3, accur
         gradient = ba.numerical_differentiate.Grad(func, initialX)
         hessianMatrix = ba.numerical_differentiate.Hessian(func, initialX)
 
-        if not ba.numerical_differentiate.isPositiveDenifite(hessianMatrix):
+        if not ba.check_condition.isPositiveDenifite(hessianMatrix):
             raise ValueError("This problem is not convex, cannot use this method to solve!")
 
         invHessianMatrix = np.linalg.inv(hessianMatrix)
@@ -22,7 +22,7 @@ def guardedNewtionMethod(func, initialX, displayDetail= False, decimal= 3, accur
             print("INV-HESSIAN-MATRIX AT POINT " + str(initialX.round(decimal))
                   + " IS: \n" + str(invHessianMatrix.round(decimal)))
 
-        if ba.check_convergence.isNewtonConvergent(gradient, invHessianMatrix):
+        if ba.check_condition.isNewtonConvergent(gradient, invHessianMatrix):
             if displayDetail == True:
                 print("ITERATION BREAK! THE MINIMAL VALUE OBTAINED AT POINT: "
                       + str(initialX.round(decimal)))
@@ -35,7 +35,7 @@ def guardedNewtionMethod(func, initialX, displayDetail= False, decimal= 3, accur
 
         if displayDetail == True:
             print("THE NEXT POINT IS: " + str(newX.round(decimal)))
-            print("======================================================================")
+            ba.decoration.plotDashLine()
 
         initialX = newX.copy()
         counter += 1

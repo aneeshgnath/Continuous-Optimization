@@ -21,9 +21,9 @@ def gradientDescentMethod(func, initialX, displayDetail= False, decimal= 3, accu
 
         if displayDetail == True:
             print("THE NEXT POINT IS: " + str(newX.round(decimal)))
-            print("======================================================================")
+            ba.decoration.plotDashLine()
 
-        if ba.check_convergence.isConvergent(initialX, newX, accuracy= 1e-6):
+        if ba.check_condition.isConvergent(initialX, newX, accuracy= 1e-6):
             if displayDetail == True:
                 print("ITERATION BREAK! THE MINIMAL VALUE OBTAINED AT POINT: "
                       + str(initialX.round(decimal)))

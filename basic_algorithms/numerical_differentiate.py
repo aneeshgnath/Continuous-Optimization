@@ -58,13 +58,4 @@ def Hessian(func, x, stepLength= 1e-4):
 
     return hessian
 
-def isPositiveDenifite(hessianMatrix):
-
-    eigenvalues = np.linalg.eig(hessianMatrix)[0]
-
-    for eigenvalue in eigenvalues:
-        if eigenvalue <= 0:
-            return  False
-
-    return True
 
