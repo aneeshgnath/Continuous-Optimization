@@ -30,3 +30,13 @@ Note: You can read the principles in `README.pdf`
     1. Zoutendijk Method (COMING SOON)
     
     2. Interior Point Method (COMING SOON)
+
+----------------------------
+**April 14, 2017**
+
+I'm sorry recently I do not have enough time to update this repository. In the middle of June the Linear Programming Model, 
+as the fundamental of the Zoutendijk Method, may be added in.
+
+Regrads,
+
+Zheng Li
