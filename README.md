@@ -1,4 +1,6 @@
-**Convex Optimization Algorithms**
+# CONTINUOUS OPTIMIZATION #
+
+RENEWAL FROM 6/6/2018 :)
 
 Note: You can read the principles in `README.pdf`
 
