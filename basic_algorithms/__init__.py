@@ -1,4 +1,0 @@
-from basic_algorithms import linear_search
-from basic_algorithms import check_condition
-from basic_algorithms import numerical_differentiate
-from basic_algorithms import decoration
