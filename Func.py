@@ -20,6 +20,8 @@ class FuncObj:
         ------
             gradient : An array containing the gradient
         """
+        if len(x) != self._var_num:
+            raise ValueError("The dimension of input point must be according to the var_num in the function")
 
         import operator as op
         x = np.asarray(x, dtype= float)
@@ -28,7 +30,7 @@ class FuncObj:
             self._f(self.__bit_op(x, i, step_len, op.sub))) / (2 * step_len)
             for i in range(len(x))]
    
-        return grad
+        return np.asarray(grad)
 
     def hessian(self, x, step_len= 1e-6):
         
@@ -67,13 +69,5 @@ class FuncObj:
         y[pos2] = op2(y[pos2], a2)
         return y
 
-        
-if __name__ == "__main__":
-    
-    def f(x):
-        return np.sin(x[0]) + x[1]*x[1]*x[0]
-
-    myFunc = FuncObj(f= f, var_num= 2)
-    x= [2, 1]
-    print(myFunc.grad(x))
-    print(myFunc.hessian(x))
+    def __call__(self, x):
+        return self._f(x)
