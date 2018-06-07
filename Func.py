@@ -30,7 +30,7 @@ class FuncObj:
    
         return grad
 
-    def Hessian(self, x, step_len= 1e-6):
+    def hessian(self, x, step_len= 1e-6):
         
         import operator as op
         x = np.asarray(x, dtype= float)
@@ -53,7 +53,7 @@ class FuncObj:
                     hessian[i][j] = (self._f(p1) + self._f(p2) - self._f(p3) - 
                         self._f(p4) - self._f(p5) - self._f(p6) + 
                         2 * self._f(x)) / (2 * step_len ** 2)
-                        
+
         return hessian
 
     def __bit_op(self, x, pos, a, op):
@@ -76,4 +76,4 @@ if __name__ == "__main__":
     myFunc = FuncObj(f= f, var_num= 2)
     x= [2, 1]
     print(myFunc.grad(x))
-    print(myFunc.Hessian(x))
+    print(myFunc.hessian(x))
