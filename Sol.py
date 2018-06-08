@@ -1,9 +1,10 @@
 import numpy as np
+from Decorator import clock
 
 class Solver:
 
-    def gradient_descent_mtd(self, f, x):
-        
+    @clock
+    def gradient_descent_mtd(self, f, x):    
         while True:
             neg_grad = - f.grad(x)
             opt_alpha = self.bisection(f, x, neg_grad)

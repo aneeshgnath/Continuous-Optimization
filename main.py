@@ -12,6 +12,6 @@ if __name__ == "__main__":
     x= [2, 1]
 
     solver = Solver()
-    opt = solver.gradient_descent_mtd(f= myFunc, x= x)
-    print("Optimal: ", opt, myFunc(opt))
+    result = solver.gradient_descent_mtd(myFunc, x)
 
+    print(result)
