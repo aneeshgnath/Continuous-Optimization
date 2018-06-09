@@ -33,7 +33,18 @@ class FuncObj:
         return np.asarray(grad)
 
     def hessian(self, x, step_len= 1e-6):
+        """Compute the Hessian matrix of a function at a given point
         
+        Parameters
+        ----------
+            func : A function object
+            x : An array-like point represented where the Hessian matrix was computed
+            step_len : The scale of difference we used in the computation of Hessian matrix, when the step length tends to 0 we get the true Hessian matrix
+
+        Return
+        ------
+            Hessian matrix : An ndarray representing the Hessian matrix
+        """
         import operator as op
         x = np.asarray(x, dtype= float)
         
