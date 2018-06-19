@@ -1,5 +1,17 @@
 # CONTINUOUS OPTIMIZATION #
 
+## June 19, 2018 ##
+
+In these days I have noticed that, sometimes the 1-dimensional research method plays a vital important role in the performance of solving the non-linear optimization problem, and obiviously it does not meet the "demand" if there is only `bisection method`, we are supposed to find more.
+
+Moreover, for methods used for solving unconstrained optimization problems(`gradient descent method`, `newton method`, `conjugated direction method`, `quasi-newton method` and their variants), they all have used the information of the first order derivative of objective function! Sometimes the algorithm even requires the objective function to be **continuous differentiable**, which is a pretty ideal property!
+
+I mean, if an objective function is already continuous differentiable, and the feasible region is the whole domain, we can get the analytic optimal solution quiet easily when the scale of problem is not huge and the objective function is not such weird.
+
+In the lastest lab exam of the course Optimization the professor introduced such an optimization method which does not utilize the derivative, and it also have the global convergence property. This is a happy idea, because usually the optimization problems which we meet are without good properties.
+
+However, I don't know if it is a heuristic algorithm, and I didn't check its theoretical foundation, which cause my unconvinced attitude to it X) Anyway, I will study it during the summer vacation, and provide the code at that time.
+
 ## June 6, 2018 ##
 
 I will re-write this repository using OOP, also the theory part will be revised because it was not clear enough.
